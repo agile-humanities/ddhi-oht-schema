@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Transcript of an Interview with Narrator</title>
+            <sponsor>Dartmouth Vietnam Project</sponsor>
+         </titleStmt>
+         <publicationStmt>
+            <p>Boilerplate text</p>
+         </publicationStmt>
+         <sourceDesc>
+            <recordingStmt>
+               <recording xml:id="primary_recording" type="audio" dur-iso="P1H25M"
+                  facs="link_to_file">
+                  <date when-iso="2015-03-01"/>
+               </recording>
+            </recordingStmt>
+            <bibl xml:id="primary_transcription" facs="link_to_file"/>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <projectDesc>
+            <p>Recorded, transcribed, and encoded for the <orgName>Dartmouth Vietnam
+                  Project</orgName></p>
+         </projectDesc>
+         <appInfo>
+            <application ident="pandoc" version="2.8">
+               <label>pandoc 2.8</label>
+            </application>
+            <application version="1.0.0" ident="ddhi-tool">
+               <label>ddhi-tool 1.0.0</label>
+            </application>
+         </appInfo>
+      </encodingDesc>
+      <profileDesc>
+         <particDesc>
+            <person xml:id="DIM"/>
+            <person xml:id="BILLO"/>
+         </particDesc>
+         <settingDesc>
+            <place>
+               <placeName>Rauner Library</placeName>
+            </place>
+         </settingDesc>
+      </profileDesc>
+
+
+   </teiHeader>
+   <text>
+      <body>
+         <p>Some text here.</p>
+      </body>
+   </text>
+</TEI>
