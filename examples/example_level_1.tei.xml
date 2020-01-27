@@ -3,17 +3,66 @@
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
 	schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <!-- 
+      In populating the teiHeader, prefer structured data whenever possible, to 
+      simplify machine processing and augment discovery.
+   -->
    <teiHeader>
       <fileDesc>
          <titleStmt>
+            <!-- 
+            The titleStmt contains the title given to the electronic work.
+         -->
+
             <title>Transcript of an Interview with Narrator</title>
-            <sponsor>Dartmouth Vietnam Project</sponsor>
+            <!-- 
+               The title should be generic and simple.  Omit dates, name(s) of
+               projects, and other information recorded elsewhere in the teiHeader.
+            -->
+            
+            <!-- 
+               Do not use <editor>, <author>, <principal>, or other role terms; use <respStmt> instead.
+               Do not provide information about the interviewer or the narrator here;
+               the titleStmt only contains data about the electronic document, not the interview, the project, etc.
+            -->
+            <respStmt>
+               <persName>Jane Doe</persName>
+               <resp ref="http://id.loc.gov/vocabulary/relators/edt.html">editor</resp>
+            </respStmt>
          </titleStmt>
          <publicationStmt>
-            <p>Boilerplate text</p>
+            <!-- 
+               The form and content of the publicationStmt is highly project specific.
+               Projects should followthe TEI Guidelines in developing a 
+               general publication statement.  We do recommend supplying an
+               <authority> element that indicates the name of the person or other 
+               agency responsible for making the work available.
+            -->
+            <authority><orgName>The Dartmouth Vietnam Project</orgName></authority>
+
+            <!-- Record the identifier of the object in the DDHI OH Repository -->
+            <idno>dvp-001</idno>
          </publicationStmt>
+         
          <sourceDesc>
+            <!-- 
+               The <sourceDesc> element describes the source from which an electronic text 
+               was derived or generated.
+            -->
             <recordingStmt>
+               <!-- 
+                  The <recordingStmt> describes the recording or set of recordings used as 
+                  the basis for transcription of a spoken text.
+               -->
+               
+               <!-- The <recording> element contains details about the audio or video recording
+               that was used as the source of the text.  At minimum, this element should contain
+               a @type attribute (audio or video), the length (duration) of the record in machine-readable,
+               ISO-standard format (@dur-iso), and, whenever relevant and possible, a link to any
+               intermediate transcription (such as the DVP Word docs) that may exist, or that may have
+               been used in creating the electronic text.  This link is provided via the facsimile 
+               attribute (@facs).
+               -->
                <recording xml:id="primary_recording" type="audio" dur-iso="P1H25M"
                   facs="link_to_file">
                   <date when-iso="2015-03-01"/>
