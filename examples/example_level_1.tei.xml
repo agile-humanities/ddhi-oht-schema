@@ -57,18 +57,27 @@
                
                <!-- The <recording> element contains details about the audio or video recording
                that was used as the source of the text.  At minimum, this element should contain
+               the length of the recording in machine-readable, ISO-standard format.  When possible, 
+               supply the date on which the recording was made.  When possible, projects
+               should supply information about the medium: its type; the equipement used
                a @type attribute (audio or video), the length (duration) of the record in machine-readable,
                ISO-standard format (@dur-iso), and, whenever relevant and possible, a link to any
                intermediate transcription (such as the DVP Word docs) that may exist, or that may have
                been used in creating the electronic text.  This link is provided via the facsimile 
                attribute (@facs).
                -->
-               <recording xml:id="primary_recording" type="audio" dur-iso="P1H25M"
-                  facs="link_to_file">
-                  <date when-iso="2015-03-01"/>
+               <recording xml:id="primary_recording" type="audio" dur-iso="P1H25M">
+                  <p>Recorded at <placeName>place</placeName>. on <date when-iso="2015-03-01">March 1st, 2015</date></p>
+                  <media url="path_to_file" mimeType="MIMEaudio/wav"/>
                </recording>
             </recordingStmt>
-            <bibl xml:id="primary_transcription" facs="link_to_file"/>
+            
+            <!-- When relevant and possible, include a reference to any intermediat transcription(s) that 
+            may have been used in creating the electronic text. The reference should include catalog information
+            if the recording is held in a library or archive, or a ref pointer to the actual file. -->
+            <bibl xml:id="primary_transcription">
+               <ref target="path_to_file">Primary transcription</ref>
+            </bibl>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
@@ -76,6 +85,12 @@
             <p>Recorded, transcribed, and encoded for the <orgName>Dartmouth Vietnam
                   Project</orgName></p>
          </projectDesc>
+         
+         <!-- 
+            The DDHI tools should include this kind of information if possible; encoders
+            should not be required to provide it.  This information is useful in tracing
+            bugs and other automation artifacts.
+         -->
          <appInfo>
             <application ident="pandoc" version="2.8">
                <label>pandoc 2.8</label>
@@ -87,8 +102,8 @@
       </encodingDesc>
       <profileDesc>
          <particDesc>
-            <person xml:id="DIM"/>
-            <person xml:id="BILLO"/>
+            <person xml:id="SOLOMON"><persName>Hannah Solomon</persName></person>
+            <person xml:id="TAVELA"><persName>Susan Tavela</persName></person>
          </particDesc>
          <settingDesc>
             <place>
@@ -96,8 +111,6 @@
             </place>
          </settingDesc>
       </profileDesc>
-
-
    </teiHeader>
    <text>
       <body>
