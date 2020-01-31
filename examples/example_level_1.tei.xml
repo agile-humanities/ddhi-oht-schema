@@ -10,7 +10,7 @@
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <!-- 
+         <!-- 
             The titleStmt contains the title given to the electronic work.
          -->
 
@@ -40,7 +40,7 @@
             -->
             <authority><orgName>The Dartmouth Vietnam Project</orgName></authority>
 
-            <!-- Record the identifier of the object in the DDHI OH Repository -->
+            <!-- Project should record the identifier of the object in the DDHI OH Repository. -->
             <idno>dvp-001</idno>
          </publicationStmt>
          
@@ -54,27 +54,26 @@
                   The <recordingStmt> describes the recording or set of recordings used as 
                   the basis for transcription of a spoken text.
                -->
-               
-               <!-- The <recording> element contains details about the audio or video recording
-               that was used as the source of the text.  At minimum, this element should contain
-               the length of the recording in machine-readable, ISO-standard format.  When possible, 
-               supply the date on which the recording was made.  When possible, projects
-               should supply information about the medium: its type; the equipement used
-               a @type attribute (audio or video), the length (duration) of the record in machine-readable,
-               ISO-standard format (@dur-iso), and, whenever relevant and possible, a link to any
-               intermediate transcription (such as the DVP Word docs) that may exist, or that may have
-               been used in creating the electronic text.  This link is provided via the facsimile 
-               attribute (@facs).
-               -->
                <recording xml:id="primary_recording" type="audio" dur-iso="P1H25M">
-                  <p>Recorded at <placeName>place</placeName>. on <date when-iso="2015-03-01">March 1st, 2015</date></p>
+                  <!-- 
+                     The <recording> element contains details about the audio or video recording
+                     that was used as the source of the text.  Date and location information need
+                     not be supplied here, if it is supplied in the <settingDesc>. At minimum, this 
+                     element should contain the type of recording (audio or video); and the length 
+                     of the recording in machine-readable, ISO-standard format. 
+                  -->
+                  <!-- 
+                     Projects should provide a followable reference to the file or files.
+                  -->
                   <media url="path_to_file" mimeType="MIMEaudio/wav"/>
+               </recording>
+               <recording>
                </recording>
             </recordingStmt>
             
-            <!-- When relevant and possible, include a reference to any intermediat transcription(s) that 
+            <!-- When relevant and possible, include a reference to any intermediate transcription(s) that 
             may have been used in creating the electronic text. The reference should include catalog information
-            if the recording is held in a library or archive, or a ref pointer to the actual file. -->
+            if the recording is held in a library or archive, or a <ref> pointer to the actual file. -->
             <bibl xml:id="primary_transcription">
                <ref target="path_to_file">Primary transcription</ref>
             </bibl>
@@ -101,14 +100,35 @@
          </appInfo>
       </encodingDesc>
       <profileDesc>
+         <!-- 
+            Perhaps the most important section for the DDHI OH tools.  
+            It provides a detailed description of non-bibliographic aspects 
+            of a text, specifically the languages and sublanguages used, the 
+            situation in which it was produced, the participants and their setting.
+         -->
+         <langUsage>
+            <language ident="en-us">English</language>
+         </langUsage>
+         
+
          <particDesc>
+         <!-- 
+            Projects must describe the identifiable speakers, voices, or other participants 
+            in any kind of text or other persons named or otherwise referred 
+            to in a text, edition, or metadata.
+         -->
             <person xml:id="SOLOMON"><persName>Hannah Solomon</persName></person>
             <person xml:id="TAVELA"><persName>Susan Tavela</persName></person>
          </particDesc>
+         
          <settingDesc>
-            <place>
-               <placeName>Rauner Library</placeName>
-            </place>
+            <!-- 
+               Projects should record where the interview took place.
+            -->
+            <setting>
+               <date when-iso="2015-03-01">March 1st, 2015</date>
+               <locale>Rauner Library</locale>
+            </setting>
          </settingDesc>
       </profileDesc>
    </teiHeader>
