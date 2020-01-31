@@ -1,0 +1,33 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xml:lang="en">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>DDHI level 1</title>
+        <author>Clifford Wulfman</author>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>DDHI</publisher>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Written from scratch.</p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <body>
+    
+
+      <schemaSpec ident="ddhi" start="TEI" prefix="tei_" targetLang="en" docLang="en">
+        <moduleRef key="tei"/>
+        <moduleRef key="core" include="bibl date desc media ref resp respStmt rs title"/>
+        
+        <moduleRef key="header" include="appInfo authority encodingDesc fileDesc idno langUsage language notesStmt profileDesc projectDesc publicationStmt refsDecl revisionDesc seriesStmt sourceDesc teiHeader textClass titleStmt xenoData"/>
+
+        <moduleRef key="namesdates" include="event location org orgName person persName place placeName"/>
+        <moduleRef key="spoken" include="equipment pause recording recordingStmt transcriptionDesc u vocal"/>
+        <moduleRef key="corpus" include="locale particDesc setting settingDesc"/>
+        <moduleRef key="textstructure" include="TEI body text"/>
+      </schemaSpec>
+    </body>
+  </text>
+</TEI>
