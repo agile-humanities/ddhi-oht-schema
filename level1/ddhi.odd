@@ -40,13 +40,13 @@
 	  <div>
 	    <head>A Note on Terminology</head>
 	    <p>
-	    The key words MUST, MUST NOT, REQUIRED, SHALL, SHALL NOT,
-	    SHOULD, SHOULD NOT, RECOMMENDED, MAY, and OPTIONAL, when
-	    appearing in upper-case in this document, are to be
-	    interpreted as described in <ref
-	    target="https://tools.ietf.org/html/rfc2119">RFC
-	    2119</ref>.
-	  </p>
+	      The key words MUST, MUST NOT, REQUIRED, SHALL, SHALL NOT,
+	      SHOULD, SHOULD NOT, RECOMMENDED, MAY, and OPTIONAL, when
+	      appearing in upper-case in this document, are to be
+	      interpreted as described in <ref
+	      target="https://tools.ietf.org/html/rfc2119">RFC
+	      2119</ref>.
+	    </p>
 	  </div>
 	</div>
       </div>
@@ -54,8 +54,8 @@
       <div>
         <head>Recording Information About the Interview</head>
         <argument>
-          <p>What is metadata. Description of metadata elements in the
-          <gi>teiHeader</gi> with guidelines to their usage.</p>
+          <p>[What is metadata. Description of metadata elements in the
+          <gi>teiHeader</gi> with guidelines to their usage.]</p>
         </argument>
         
 	<p>
@@ -121,10 +121,210 @@
 	    TEI-encoded documents (see <ref
 	    target="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/HD.html">the
 	    TEI Guidelines chapter on the TEI Header</ref>).  The DDHI
-	    schema customizes the elements in the TEI header for use
-	    in providing metadata about oral-history interviews
+	    schema adopts and customizes the elements in the TEI
+	    header for use in providing metadata about oral-history
+	    interviews.
+	  </p>
+	  <p>
+	    Those with prior acquaintance with the TEI will notice
+	    that we do not, in this document, advise exhaustive use of
+	    the TEI header's elements.  There are several reasons for
+	    this.  First, as a general-purpose metadata framework, the
+	    TEI header is intended to be a superset of possible
+	    metadata fields that is customized and restricted to fit
+	    local requirements and practices: projects are not
+	    encouraged to implement it exhaustively.  Second, we have
+	    aimed these guidelines ato oral historians who are
+	    creating interview transcriptions on their own, for their
+	    own purposes.  Rather than providing guidance on how to
+	    translate metadata in library and archival records to TEI,
+	    we advocate providing pointers to such data whenever
+	    possible, or, as a last resort, including such information
+	    directly in the header in the form of <gi>xenodata</gi>.
+	    Third, these guidelines advocate <emph>minimal</emph>
+	    practice; projects are of course welcome to use the DDHI
+	    schema as a template for creating their own customizations.
+	  </p>
+	  <p>
+	    In populating the teiHeader, prefer structured data
+	    whenever possible, to simplify machine processing and
+	    augment discovery.
+	  </p>
+	</div>
+	<div>
+	  <head>Describing the Sources of the File</head>	    
+
+	  <p>
+	    <specList>
+	      <specDesc key="sourceDesc"/>
+	      <specDesc key="recordingStmt"/>
+	      <specDesc key="bibl"/>
+	    </specList>
+	  </p>
+	  <p>
+	    Most encoded interview transcriptions are derived from
+	    other media: sometimes directly from a recording,
+	    sometimes from a pre-existing transcription.  It is
+	    important to document these sources, especially primary
+	    sources like recordings, so that researchers can get
+	    closer to the actual event if they need to.
 	  </p>
 
+	  <p>
+	    When supplying metadata about audio or video recordings of
+	    interviews, indicate the date and location of the
+	    recording, the length of the recording, and the media
+	    formats in which it is available (e.g., digital audio,
+	    analog tape, etc.).  Whenever possible, provide a
+	    followable reference to the recording: a pointer a
+	    bibliographic record or directly to a digital file.
+	  </p>
+	  
+	  <p>
+	    Similarly, when relevant and possible, include a reference
+	    to any intermediate transcription(s) that may have been
+	    used in creating the electronic text. The reference should
+	    include catalog information if the recording is held in a
+	    library or archive, or a <gi>ref</gi> pointer to the actual file.
+	  </p>
+	</div>
+	<div>
+	  <head>About the Encoding</head>
+	  <p>
+	    <specList>
+	      <specDesc key="encodingDesc" />
+	    </specList>
+	  </p>
+
+	  <p>
+	    Projects should describe the methods and editorial
+	    principles that governed the creation of the text.  This
+	    description may take the form of general-purpose,
+	    project-specific boilerplate text, or it may be more
+	    structured.
+	  </p>
+	</div>
+
+	<div>
+	  <head>Describing the Interview</head>
+	  <p>
+	    <specList>
+	      <specDesc key="profileDesc" />
+	    </specList>
+	  </p>
+
+	  <p>
+	    For oral history transcriptions, perhaps the most
+	    important portion of the tei Header is the
+	    <gi>profileDesc</gi>, which provides elements that can be
+	    used to describe the interview participants, where the
+	    interview occurred, the language or languages used, and
+	    other details.
+	  </p>
+
+	  <div>
+	    <head>Describing the Participants</head>
+	    <p>
+	      <specList>
+		<specDesc key="particDesc" />
+	      </specList>
+	    </p>
+
+	    <p>
+	      Projects MUST identify the speakers in the interview in
+	      some way, so that utterances may be associated with
+	      those who uttered them.  If confidentiality
+	      considerations prevent the inscription of names, aliases
+	      may be used. The roles of <term>interviewer</term> and
+	      <term>narrator</term> are mandatory.
+	    </p>
+	  </div>
+
+	  <div>
+	    <head>Describing the Persons Mentioned</head>
+
+	    <p>
+	      Projects MAY use the <gi>particDesc</gi> to inventory
+	      the persons and/or organizations that are mentioned in
+	      the interview.  These inventories of <soCalled>named
+	      entities</soCalled> are often difficult to compile, but
+	      they can be very useful for discovery and analysis.
+	    </p>
+	    <p>This is a very large topic, and will be discussed more
+	    fully later, in another section.</p>
+	  </div>
+	</div>
+
+
+	<div>
+	  <head>Describing the Transcription File Itself</head>
+	  <p>
+	    <specList>
+	      <specDesc key="titleStmt" />
+	      <specDesc key="respStmt" />
+	      <specDesc key="publicationStmt" />
+	    </specList>
+	  </p>
+	  <p>
+	    The XML document is not the interview.  It is an artifact
+	    in its own right: a digital artifact, a file, with its own
+	    history and its own properties.  The first section of the
+	    header, the <gi>fileSec</gi>, should be used to record
+	    metadata about the file distinct from its sources
+	    (recordings, prior transcriptions from which it may be
+	    derived). 
+	  </p>
+
+	  <p>
+	    The XML document should have a title that enables human
+	    readers to identify it from a list of other interviews.
+	    The title should be generic and simple.  Omit dates,
+	    the name of the project, or other information recorded
+	    elsewhere in the header.
+	  </p>
+	  <egXML xmlns="http://www.tei-c.org/ns/Examples">
+	    <title>Transcription of an Interview with Toni Morrison</title>
+	  </egXML>
+	  
+	  <p>
+	    The document should record the person or persons
+	    responsible for its creation -- the creation of the XML
+	    document specifically, not the person who conducted the
+	    interview, or recorded it, or, if the XML document has
+	    been derived from a prior transcription, the original
+	    transcriptionist.
+	  </p>
+	  <p>
+	    When describing the role a person has played in the
+	    document's creation, projects should try to use a
+	    controlled vocabulary.  In the DDHI schema, roles have
+	    been restricted to editor, encoder, and transcriber.	    
+	  </p>
+	  <list>
+	    <item>
+	      <label rend="bold">editor:</label>
+	      <desc>one who has revised the intellectual content of
+	      the document</desc>
+	    </item>
+	    <item>
+	      <label rend="bold">encoder:</label>
+	      <desc>one who has produced the TEI markup</desc>
+	    </item>
+	    <item>
+	      <label rend="bold">transcriber:</label>
+	      <desc>one who has created the text of the interview from
+	      a recording, from memory, or from some other
+	      account</desc>
+	    </item>
+	  </list>
+
+	  <p>
+	    The document MUST include information about availability
+	    and distribution of the file.  This information may take
+	    the form of an unstructured statement, or it may be
+	    encoded using the structure provided in the
+	    <gi>publicationStmt</gi>.
+	  </p>
 	</div>
       </div>
 
@@ -134,12 +334,75 @@
           <p>[A detailed set of guidelines for marking up the text of
           an interview transcription.]</p>
         </argument>
+
+	<div>
+	  <head>Interview Structure</head>
+	  <p>
+	    <specList>
+	      <specDesc key="u" />
+	    </specList>
+	  </p>
+
+	  <p>The interview transcription should be simply structured
+	  as a sequence of utterances; the imposition of textual or editorial
+	  divisions is discouraged.  Do not, for example, segment a
+	  long utterance into paragraphs; use the <gi>pause</gi>
+	  element to indicate audible breaks, and use the
+	  <gi>milestone</gi> element to mark significant shifts (as
+	  determined by project-specific guidelines). (This topic will
+	  be discussed more thoroughly later.)
+</p>
+
+	  <p>Each utterance MUST be associated with a speaker
+	  identified in the <gi>particDesc</gi> portion of the TEI
+	  header.</p>
+	</div>
+
+	<div>
+	  <head>Encoding Named Entities</head>
+	  <p>
+	    <specList>
+	      <specDesc key="persName" />
+	      <specDesc key="placeName" />
+	      <specDesc key="orgName" />
+	      <specDesc key="rs" />
+	    </specList>
+	  </p>
+
+	  <div>
+	    <head>persons, places, organizations</head>
+
+	    <p>Description to come</p>
+	  </div>
+
+	  <div>
+	    <head>Encoding Named Events</head>
+
+	    <p>Use the <gi>rs</gi> (referring string) element to mark
+	    references to a named event, such as the Vietnam War.</p>
+
+	    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+	      <u who="#interviewer">So you arrived in
+	      <placeName>Cuba</placeName> two or three after the <rs
+	      type ="event">Bay of Pigs</rs> and the <rs type
+	      ="event">Cuban Missile Crisis</rs>...</u>
+	    </egXML>
+	    
+	  </div>
+
+	</div>
+
+	<div>
+	  <head>Encoding Dates</head>
+
+	  <p>Description to come</p>
+	</div>
       </div>
 
       <div>
         <head>The Formal Schema Specification</head>
         <argument>
-          <p>An overview of what this is.</p>
+          <p>[An overview of what this is.]</p>
         </argument>
 
         <schemaSpec ident="ddhi" start="TEI" prefix="tei_" targetLang="en" docLang="en">
