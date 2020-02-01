@@ -1,4 +1,5 @@
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xml:lang="en">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0"
+     xml:lang="en">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -15,19 +16,154 @@
   </teiHeader>
   <text>
     <body>
-    
+      <div>
+        <head>Introduction</head>
+        <argument>
+          <p>[Some introductory language here, about the project,
+	  etc.  How to use these guidelines.]</p>
+        </argument>
 
-      <schemaSpec ident="ddhi" start="TEI" prefix="tei_" targetLang="en" docLang="en">
-        <moduleRef key="tei"/>
-        <moduleRef key="core" include="bibl date desc media ref resp respStmt rs title"/>
+	<div>
+	  <head>How to Use these Guidelines</head>
+
+	  <p>
+	    The first section is a general-purpose description of the
+	    DDHI schema and how projects should use it.  It is
+	    intended for project directors, managers, and others
+	    interested in the recommendations but not interested in
+	    encoding.  The second section is compiled from the actual
+	    schema specification and is aimed at text encoders and
+	    developers writing software to process DDHI-encoded
+	    interview transcriptions.
+	  </p>
+
+	  <div>
+	    <head>A Note on Terminology</head>
+	    <p>
+	    The key words MUST, MUST NOT, REQUIRED, SHALL, SHALL NOT,
+	    SHOULD, SHOULD NOT, RECOMMENDED, MAY, and OPTIONAL, when
+	    appearing in upper-case in this document, are to be
+	    interpreted as described in <ref
+	    target="https://tools.ietf.org/html/rfc2119">RFC
+	    2119</ref>.
+	  </p>
+	  </div>
+	</div>
+      </div>
+
+      <div>
+        <head>Recording Information About the Interview</head>
+        <argument>
+          <p>What is metadata. Description of metadata elements in the
+          <gi>teiHeader</gi> with guidelines to their usage.</p>
+        </argument>
         
-        <moduleRef key="header" include="appInfo authority encodingDesc fileDesc idno langUsage language notesStmt profileDesc projectDesc publicationStmt refsDecl revisionDesc seriesStmt sourceDesc teiHeader textClass titleStmt xenoData"/>
+	<p>
+	  An interview transcription is the durable sign of an
+	  ephemeral event.  Besides the information inherent in the
+	  interview -- what the people say -- we often need to know
+	  more about the interview itself.  Who are these people?  Why
+	  are they talking?  When did the conversation take place?
+	  Where?  Where did this transcription come from?  How did it
+	  come to be?  Was it made from a recording?  Where can I go
+	  to hear the recording?
+	</p>
+	<p>
+	  This sort of information about information is called
+	  <term>metadata</term>.  Metadata can be used to identify
+	  data, classify it, regulate it, control it.  A citation is
+	  metadata; your notes are metadata; annotations are metadata.
+	  Metadata is eminently utilitarian: good metadata is often
+	  costly and difficult to gather and record, so it is usually
+	  produced for specific purposes.  One of the major roles of
+	  libraries and archives is to produce, preserve, and provide
+	  metadata about the materials they collect so that they may
+	  be found and used by researchers.  Researchers themselves
+	  may produce different sorts of metadata that incorporate,
+	  augment, supplement, and even displace institutional
+	  metadata.
+	</p>
+	<p>
+	  To be useful, metadata must be accessible: it must be
+	  available to those who would use it, and it must be written
+	  in a form that users can read and understand.  All users are
+	  not created equal.  The metadata we describe and advise upon
+	  here are intended for two kinds of reader: oral historians,
+	  and the computer programs they use to do their research.
+	</p>
+	<p>
+	  Projects seldom create transcriptions <foreign>de
+	  novo</foreign>.  The purpose of the metadata we describe is
+	  not to replace archival or library metadata.  Its purpose is
+	  to supplement and complement that data.  These guidelines
+	  are not intended for librarians or archivists; they most
+	  emphatically do not purport to advise about, comment upon,
+	  or otherwise interfere with the highly controlled,
+	  formalized, and well-thought-out standards and processes
+	  established and followed by those professionals.  Wherever
+	  and whenever possible, projects should avoid duplicating
+	  metadata produced by libraries and archives and instead make
+	  explicit and actionable reference to that metadata in their
+	  own.  If a recording of the interview resides in your
+	  university's special collections, for example, include a
+	  pointer to the archival finding aid; do not duplicate the
+	  information found therein without explicit cause.
+	</p>
 
-        <moduleRef key="namesdates" include="event location org orgName person persName place placeName"/>
-        <moduleRef key="spoken" include="equipment pause recording recordingStmt transcriptionDesc u vocal"/>
-        <moduleRef key="corpus" include="locale particDesc setting settingDesc"/>
-        <moduleRef key="textstructure" include="TEI body text"/>
-      </schemaSpec>
+	<div>
+	  <head>The Form of Metadata: the TEI Header</head>
+
+	  <note>Somewhere else there should be general justification
+	  for using the TEI.</note>
+
+	  <p>
+	    The TEI header is a general-purpose metadata framework for
+	    TEI-encoded documents (see <ref
+	    target="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/HD.html">the
+	    TEI Guidelines chapter on the TEI Header</ref>).  The DDHI
+	    schema customizes the elements in the TEI header for use
+	    in providing metadata about oral-history interviews
+	  </p>
+
+	</div>
+      </div>
+
+      <div>
+        <head>Transcribing the Interview</head>
+        <argument>
+          <p>[A detailed set of guidelines for marking up the text of
+          an interview transcription.]</p>
+        </argument>
+      </div>
+
+      <div>
+        <head>The Formal Schema Specification</head>
+        <argument>
+          <p>An overview of what this is.</p>
+        </argument>
+
+        <schemaSpec ident="ddhi" start="TEI" prefix="tei_" targetLang="en" docLang="en">
+          <desc>A schema to encode oral history interviews</desc>
+          <moduleRef key="tei"/>
+
+          <moduleRef key="textstructure" include="TEI body text"/>
+          <moduleSpec ident="textstructure"/>
+
+          <moduleRef key="core" include="bibl date desc media ref resp respStmt rs title"/>
+
+          <moduleRef key="header"
+		     include="appInfo authority encodingDesc fileDesc idno langUsage language notesStmt profileDesc projectDesc publicationStmt refsDecl revisionDesc seriesStmt sourceDesc teiHeader textClass titleStmt xenoData"/>
+
+          <moduleRef key="namesdates"
+		     include="event location org orgName person persName place placeName"/>
+
+          <moduleRef key="spoken"
+		     include="equipment pause recording recordingStmt transcriptionDesc u vocal"/>
+
+          <moduleRef key="corpus" include="locale particDesc setting settingDesc"/>
+
+        </schemaSpec>
+      </div>
     </body>
   </text>
 </TEI>
