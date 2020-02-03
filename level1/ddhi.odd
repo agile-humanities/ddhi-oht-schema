@@ -3,11 +3,13 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title>DDHI level 1</title>
+        <title>DDHI Oral History Schema</title>
         <author>Clifford Wulfman</author>
       </titleStmt>
       <publicationStmt>
         <publisher>DDHI</publisher>
+        <authority>Dartmouth College</authority>
+        <distributor>Dartmouth College</distributor>
       </publicationStmt>
       <sourceDesc>
         <p>Written from scratch.</p>
@@ -52,7 +54,7 @@
       </div>
 
       <div>
-        <head>Recording Information About the Interview</head>
+        <head>Metadata: Recording Information About the Interview</head>
         <argument>
           <p>[What is metadata. Description of metadata elements in the
           <gi>teiHeader</gi> with guidelines to their usage.]</p>
@@ -344,14 +346,14 @@
 	  </p>
 
 	  <p>The interview transcription should be simply structured
-	  as a sequence of utterances; the imposition of textual or editorial
-	  divisions is discouraged.  Do not, for example, segment a
-	  long utterance into paragraphs; use the <gi>pause</gi>
-	  element to indicate audible breaks, and use the
-	  <gi>milestone</gi> element to mark significant shifts (as
-	  determined by project-specific guidelines). (This topic will
-	  be discussed more thoroughly later.)
-</p>
+	  as a sequence of <term>utterances</term>; the imposition of
+	  textual or editorial divisions is discouraged.  Do not, for
+	  example, segment a long utterance into paragraphs; use the
+	  <gi>pause</gi> element to indicate audible breaks, and use
+	  the <gi>milestone</gi> element to mark significant shifts
+	  (as determined by project-specific guidelines). (This topic
+	  will be discussed more thoroughly later.)
+	  </p>
 
 	  <p>Each utterance MUST be associated with a speaker
 	  identified in the <gi>particDesc</gi> portion of the TEI
