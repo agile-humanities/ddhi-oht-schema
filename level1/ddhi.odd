@@ -30,13 +30,13 @@
 
 	  <p>
 	    The first section is a general-purpose description of the
-	    DDHI schema and how projects should use it.  It is
+	    DDHI schema and how projects and researchers should use it.  It is
 	    intended for project directors, managers, and others
 	    interested in the recommendations but not interested in
 	    encoding.  The second section is compiled from the actual
-	    schema specification and is aimed at text encoders and
-	    developers writing software to process DDHI-encoded
-	    interview transcriptions.
+	    schema specification and is intended for use by persons marking 
+	    up interviews using the DDHI schema and developers writing software 
+	    to process DDHI-encoded interview transcriptions.
 	  </p>
 
 	  <div>
@@ -136,9 +136,9 @@
 	    metadata fields that is customized and restricted to fit
 	    local requirements and practices: projects are not
 	    encouraged to implement it exhaustively.  Second, we have
-	    aimed these guidelines ato oral historians who are
-	    creating interview transcriptions on their own, for their
-	    own purposes.  Rather than providing guidance on how to
+	    aimed these guidelines at users who will have different 
+	    reasons for tagging interviews and in search of differing results.
+	    Rather than providing guidance on how to
 	    translate metadata in library and archival records to TEI,
 	    we advocate providing pointers to such data whenever
 	    possible, or, as a last resort, including such information
@@ -185,7 +185,7 @@
 	  <p>
 	    Similarly, when relevant and possible, include a reference
 	    to any intermediate transcription(s) that may have been
-	    used in creating the electronic text. The reference should
+	    used in creating the TEI-encdoded document. The reference should
 	    include catalog information if the recording is held in a
 	    library or archive, or a <gi>ref</gi> pointer to the actual file.
 	  </p>
@@ -374,7 +374,14 @@
 	  <div>
 	    <head>persons, places, organizations</head>
 
-	    <p>Description to come</p>
+	    <p>The DDHI defines persons as people who are identified by name.
+	    We use the <term>persName</term> element to tag persons.
+	    The DDHI defines places as named entities that can be geolocated.
+	    We use the <term>placeName</term> element to tag places.
+	    The DDHI defines organizations as a named entities with a defined 
+	    or definiable membership. The organization has to be defined by 
+	    more than the self-identification of its members.
+	    We use the <term>orgName</term> element to tag organizations and institutions.</p>
 	  </div>
 
 	  <div>
@@ -397,7 +404,8 @@
 	<div>
 	  <head>Encoding Dates</head>
 
-	  <p>Description to come</p>
+	  <p>The DDHI defines dates as a reference to a complete calendar date or the year.
+	  We use the <term>date</term> element and the <term>when</term> attribute</p>
 	</div>
       </div>
 
