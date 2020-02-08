@@ -422,7 +422,7 @@
           <moduleRef key="textstructure" include="TEI body text"/>
           <moduleSpec ident="textstructure"/>
 
-          <moduleRef key="core" include="bibl date desc media ref resp respStmt rs title"/>
+          <moduleRef key="core" include="bibl date desc media p ab ref resp respStmt rs title"/>
 
           <moduleRef key="header"
 		     include="appInfo authority encodingDesc fileDesc idno langUsage language notesStmt profileDesc projectDesc publicationStmt refsDecl revisionDesc seriesStmt sourceDesc teiHeader textClass titleStmt xenoData"/>
@@ -431,7 +431,7 @@
 		     include="event location org orgName person persName place placeName"/>
 
           <moduleRef key="spoken"
-		     include="equipment pause recording recordingStmt transcriptionDesc u vocal"/>
+		     include="equipment pause recording recordingStmt u vocal"/>
 
           <moduleRef key="corpus" include="locale particDesc setting settingDesc"/>
 
