@@ -219,7 +219,7 @@
 	    For oral history transcriptions, perhaps the most
 	    important portion of the tei Header is the
 	    <gi>profileDesc</gi>, which provides elements that can be
-	    used to describe the interview participants, where the
+	    used to describe the interview participants, when the interview occurred, where the
 	    interview occurred, the language or languages used, and
 	    other details.
 	  </p>
@@ -271,7 +271,7 @@
 	    The XML document is not the interview.  It is an artifact
 	    in its own right: a digital artifact, a file, with its own
 	    history and its own properties.  The first section of the
-	    header, the <gi>fileSec</gi>, should be used to record
+	    header, the <gi>fileDesc</gi>, should be used to record
 	    metadata about the file distinct from its sources
 	    (recordings, prior transcriptions from which it may be
 	    derived). 
@@ -367,7 +367,7 @@
 	      <specDesc key="persName" />
 	      <specDesc key="placeName" />
 	      <specDesc key="orgName" />
-	      <specDesc key="rs" />
+	      <specDesc key="name" />
 	    </specList>
 	  </p>
 
@@ -375,19 +375,19 @@
 	    <head>persons, places, organizations</head>
 
 	    <p>The DDHI defines persons as people who are identified by name.
-	    We use the <term>persName</term> element to tag persons.
+	    We use the <gi>persName</gi> element to tag persons.
 	    The DDHI defines places as named entities that can be geolocated.
-	    We use the <term>placeName</term> element to tag places.
+	    We use the <gi>placeName</gi> element to tag places.
 	    The DDHI defines organizations as a named entities with a defined 
 	    or definiable membership. The organization has to be defined by 
 	    more than the self-identification of its members.
-	    We use the <term>orgName</term> element to tag organizations and institutions.</p>
+	    We use the <gi>orgName</gi> element to tag organizations and institutions.</p>
 	  </div>
 
 	  <div>
 	    <head>Encoding Named Events</head>
 
-	    <p>Use the <gi>rs</gi> (referring string) element to mark
+	    <p>Use the <gi>name</gi> element to mark
 	    references to a named event, such as the Vietnam War.</p>
 
 	    <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -405,7 +405,7 @@
 	  <head>Encoding Dates</head>
 
 	  <p>The DDHI defines dates as a reference to a complete calendar date or the year.
-	  We use the <term>date</term> element and the <term>when</term> attribute</p>
+	  We use the <gi>date</gi> element and the when attribute</p>
 	</div>
       </div>
 
