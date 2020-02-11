@@ -94,15 +94,14 @@
             <language ident="en-us">English</language>
          </langUsage>
          
-
          <particDesc>
          <!-- 
             Projects must describe the identifiable speakers, voices, or other participants 
             in any kind of text or other persons named or otherwise referred 
             to in a text, edition, or metadata.
          -->
-            <person xml:id="SOLOMON"><persName>Hannah Solomon</persName></person>
-            <person xml:id="TAVELA"><persName>Susan Tavela</persName></person>
+            <person xml:id="SOLOMON" role="interviewer"><persName>Hannah Solomon</persName></person>
+            <person xml:id="TAVELA" role="narrator"><persName>Susan Tavela</persName></person>
          </particDesc>
          
          <settingDesc>

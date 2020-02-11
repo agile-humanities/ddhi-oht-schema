@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="ddhi.rnc" type="application/relax-ng-compact-syntax"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Transcript of an Interview with a Narrator</title>
+         </titleStmt>
+         <publicationStmt>
+            <authority>
+               <orgName>Dartmouth Digital History Initiative</orgName>
+            </authority>
+            <date><!--  Date of publication, e.g. for citation purposes  --></date>
+         </publicationStmt>
+         <sourceDesc>
+            <recordingStmt>
+               <recording xml:id="primary_recording" type="audio" dur-iso="">
+                  <!-- https://www.digi.com/resources/documentation/digidocs/90001437-13/reference/r_iso_8601_duration_format.htm -->
+                  <media url="" mimeType="MIMEaudio/wav"></media>
+               </recording>
+            </recordingStmt>
+            <bibl xml:id="primary_transcription">
+               <respStmt>
+                  <persName>Mimi Eisenberg</persName>
+                  <orgName>Wordcraft</orgName>
+                  <resp ref="http://id.loc.gov/vocabulary/relators/trc.html">Transcriber</resp>
+               </respStmt>
+               <ref target="path_to_file">Primary transcription</ref>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+     <encodingDesc>
+        <projectDesc>
+           <p></p>
+        </projectDesc>
+     </encodingDesc>
+     <profileDesc>
+        <langUsage>
+           <language ident="en-us">English</language>
+        </langUsage>
+        <particDesc>
+           <person xml:id="" role="interviewer"><persName></persName></person>
+           <person xml:id="" role="narrator"><persName></persName></person>
+        </particDesc>
+        <settingDesc>
+           <setting>
+              <date when-iso="2015-03-01">March 1st, 2015</date>
+              <locale>Rauner Library</locale>
+           </setting>
+        </settingDesc>
+     </profileDesc>
+  </teiHeader>
+  <text>
+      <body>
+         <u></u>
+      </body>
+  </text>
+</TEI>
