@@ -422,10 +422,10 @@
           <moduleRef key="textstructure" include="TEI body text"/>
           <moduleSpec ident="textstructure"/>
 
-          <moduleRef key="core" include="bibl date desc media p ab ref resp respStmt rs title"/>
+          <moduleRef key="core" include="bibl date desc media name p ab ref resp respStmt rs title"/>
 
           <moduleRef key="header"
-		     include="appInfo authority encodingDesc fileDesc idno langUsage language notesStmt profileDesc projectDesc publicationStmt refsDecl revisionDesc seriesStmt sourceDesc teiHeader textClass titleStmt xenoData"/>
+		     include="appInfo application authority encodingDesc fileDesc idno langUsage language notesStmt profileDesc projectDesc publicationStmt refsDecl revisionDesc seriesStmt sourceDesc teiHeader textClass titleStmt xenoData"/>
 
           <moduleRef key="namesdates"
 		     include="event location org orgName person persName place placeName"/>
